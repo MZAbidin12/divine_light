@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Produk</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Titan+One&display=swap");
+
+    * {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #6ab29b;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product-image {
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: inset 0 -8px 24px #0000004d;
+      background-color: #247158;
+    }
+
+    select,
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: 800;
+      background-color: #fda521;
+      color: #033043;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .note{
+      color: white;
+      font-size: .8rem;
+      margin-bottom: 10px;
+      }
+    
+
+    @media (max-width: 600px) {
+      form {
+        padding: 15px;
+      }
+
+      select,
+      input[type="text"],
+      input[type="number"],
+      textarea {
+        width: calc(100% );
+      }
+
+      button {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="#" method="post">
+      <img src="assets/img/semua_celana.jpg" alt="Produk" class="product-image" />
+      <input type="text" name="nama_barang" placeholder="Nama Barang" class="nama_barang" />
+      <select name="warna" class="warna">
+        <option value="Warna">Pilih Warna</option>
+        <option value="pink">Pink</option>
+        <option value="biru">Biru</option>
+        <option value="sage">Sage</option>
+        <option value="peach">Peach</option>
+        <option value="coklat susu">Coklat Susu</option>
+        <option value="abu-abu">Abu-abu</option>
+        <option value="mocca">Mocca</option>
+        <option value="hitam">Hitam</option>
+        <option value="grey">Grey</option>
+        <option value="navy">Navy</option>
+      </select>
+      <select name="size" class="size">
+        <option value="size">Pilih Size</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <input type="number" name="jumlah" placeholder="Masukan jumlah" class="jumlah" />
+      <select name="pembayaran" class="pembayaran">
+        <option value="pembayaran">Pilih Metode Pembayaran</option>
+        <option value="COD">COD</option>
+        <option value="Transfer">Transfer</option>
+      </select>
+      <input type="text" name="nama" placeholder="Nama Kamu" class="nama" />
+      <input type="text" name="kota" placeholder="Kota" class="kota" />
+      <input type="text" name="kecamatan" placeholder="Kecamatan" class="kecamatan" />
+      <input type="text" name="desa" placeholder="Desa" class="desa" />
+      <textarea name="alamat" placeholder="Alamat Lengkap" class="alamat"></textarea>
+      <p class="note">Note : Biaya ongkir ditanggung pembeli</p>
+      <button type="button" onclick="sendwhatsapp();">Send via WhatsApp</button>
+    </form>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
